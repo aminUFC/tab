@@ -782,8 +782,11 @@
             cleanmenu(tfoot)                                                                           
             if (this.value != ''){                      
                 ht.newlis = ht.get(Array.from(this.value))
-                ht.print()
-            }                   
+                
+            }else{
+              ht.newlis = lis
+            }
+            ht.print()                
         })          
         sort.addEventListener('click',function(){
               this.style.transform = "rotate(180deg)"
@@ -793,6 +796,7 @@
               ht.print()
               cleanmenu(tfoot) 
               ht.footCr()
+              buttons[0].classList.add('disab')
         })
         sear.addEventListener('click',function(){
           search.style.display = 'block'
